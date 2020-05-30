@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-games"
+    }
+  },
+  "defaultProject": "angular-games",
+  "cli": {
+    "analytics": "47a374a1-9787-4051-9a41-9cd67c6ae9c0"
+  }
 }
