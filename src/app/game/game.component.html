@@ -12,11 +12,11 @@
         <!-- <a href="{{link}}" class="text-muted">(Link)</a> -->
         <a href="{{game.link}}" class="text-muted">({{game.domain()}})</a>
         <div class="f-flex mt-3">
-            <button (click)="votoUp()" type="button" class="btn btn-outline-success m-1">votar +</button>
+            <button (click)="votoUp()" type="button" class="btn btn-outline-success m-1">votar + <i class="fa fa-thumbs-up"></i> </button>
             <!-- <button type="button" class="btn btn-outline-success m-1">votar +</button> -->
-            <button (click)="votoDown()" type="button" class="btn btn-outline-warning m-1">votar -</button>
+            <button (click)="votoDown()" type="button" class="btn btn-outline-warning m-1">votar - <i class="fa fa-thumbs-down"></i> </button>
             <!-- <button type="button" class="btn btn-outline-danger m-1">votar -</button> -->
-            <button type="button" class="btn btn-danger m-1">Eliminar Juego</button>
+            <button type="button" class="btn btn-danger m-1">Eliminar Juego <i class="fa fa-trash"></i> </button>
         </div>
     </div>
 </div>
