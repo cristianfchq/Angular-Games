@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Game } from './game/game.model';
 
+let aux = 0;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,6 +32,26 @@ export class AppComponent {
   }
 
   sortedGames(): Game[]{
+    // console.log(this.games[1]);
+    let aux2 = 0;
+    let posicion = 0;
+    console.log('-----------------------------------');
+    aux = aux + 1;
+    console.log(aux);
+    // this.games.pop();
+    if (aux % 2 === 1){
+      console.log('numero par');
+      for (let i = 0; i < this.games.length; i++) {
+        if (this.games[i].votos === -1){
+          posicion = i;
+          aux2 = 1;
+        }
+      }
+      if (aux2 === 1){
+        console.log('eliminar posicion ' + posicion);
+        this.games.splice(posicion, 1);
+      }
+    }
     return this.games.sort((a: Game, b: Game) => b.votos - a.votos);
   }
 }

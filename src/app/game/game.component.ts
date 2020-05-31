@@ -28,6 +28,12 @@ export class GameComponent implements OnInit {
     return false;
   }
 
+  eliminarJuego(x: string){
+    // console.log(x);
+    // console.log(this.game.title);
+    this.game.votos = - 1;
+  }
+
   ngOnInit(): void {
   }
 
