@@ -17,10 +17,10 @@ export class AppComponent {
     this.title = 'Vota por tus juegos favoritos';
 
     this.games = [
-      new Game('fifa 20', 'https://www.ea.com/es-es/games/fifa/fifa-20',12),
-      new Game('GTA V', 'https://www.rockstartgames.com/V/es-es/games/fifa/fifa-20',21),
-      new Game('pes 2020', 'https://www.konami.com/wepes/2020/es-es/games/',10),
-      new Game('the witcher', 'https://www.witcher.com/en/',3),
+      new Game('fifa 20', 'https://www.ea.com/es-es/games/fifa/fifa-20', 12 ),
+      new Game('GTA V', 'https://www.rockstartgames.com/V/es-es/games/fifa/fifa-20', 21 ),
+      new Game('pes 2020', 'https://www.konami.com/wepes/2020/es-es/games/', 10 ),
+      new Game('the witcher', 'https://www.witcher.com/en/', 3 ),
     ];
   }
 
@@ -31,6 +31,6 @@ export class AppComponent {
   }
 
   sortedGames(): Game[]{
-    return this.games.sort((a: Game, b: Game) => b.votos - a.votos)
+    return this.games.sort((a: Game, b: Game) => b.votos - a.votos);
   }
 }
