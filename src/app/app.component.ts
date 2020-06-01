@@ -43,19 +43,19 @@ export class AppComponent {
     aux = aux + 1;
     console.log(aux);
     // this.games.pop();
-    if (aux % 2 === 1){
-      console.log('numero impar');
-      for (let i = 0; i < this.games.length; i++) {
-        if (this.games[i].votos === -1){
-          posicion = i;
-          aux2 = 1;
-        }
-      }
-      if (aux2 === 1){
-        console.log('eliminar posicion ' + posicion);
-        this.games.splice(posicion, 1);
+    // if (aux % 2 === 1){
+    //   console.log('numero impar');
+    for (let i = 0; i < this.games.length; i++) {
+      if (this.games[i].votos === -1){
+        posicion = i;
+        aux2 = 1;
       }
     }
+    if (aux2 === 1){
+      console.log('eliminar posicion ' + posicion);
+      this.games.splice(posicion, 1);
+    }
+    // }
     return this.games.sort((a: Game, b: Game) => b.votos - a.votos);
   }
 }
