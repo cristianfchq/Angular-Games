@@ -27,11 +27,11 @@ export class AppComponent {
 
   addGame(newtitle: HTMLInputElement, newlink: HTMLInputElement){
     if (newtitle.value === '' || newlink.value === ''){
-      console.log('son nulos');
+      console.warn('Uno o ambos campos estan Vacios, se debe llenar ambos campos para agregar juego');
+    }else{
+      console.log('voy a crear un nuevo juego llamado ' + newtitle.value + ' y su enlace es ' + newlink.value);
+      this.games.push(new Game(newtitle.value, newlink.value));
     }
-    console.log('voy a crear un nuevo juego llamado ' + newtitle.value + ' y su enlace es ' + newlink.value);
-    this.games.push(new Game(newtitle.value, newlink.value));
-    
     return false;
   }
 
