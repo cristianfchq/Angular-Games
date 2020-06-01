@@ -26,8 +26,12 @@ export class AppComponent {
   }
 
   addGame(newtitle: HTMLInputElement, newlink: HTMLInputElement){
+    if (newtitle.value === '' || newlink.value === ''){
+      console.log('son nulos');
+    }
     console.log('voy a crear un nuevo juego llamado ' + newtitle.value + ' y su enlace es ' + newlink.value);
     this.games.push(new Game(newtitle.value, newlink.value));
+    
     return false;
   }
 
@@ -40,7 +44,7 @@ export class AppComponent {
     console.log(aux);
     // this.games.pop();
     if (aux % 2 === 1){
-      console.log('numero par');
+      console.log('numero impar');
       for (let i = 0; i < this.games.length; i++) {
         if (this.games[i].votos === -1){
           posicion = i;
